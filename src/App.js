@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import CardList from './components/card-list/card-list.component';
 import SearchBox from './components/search-box/search-box.component';
+import Scroll from './components/scroll/scroll.component';
 import logo from './logo.svg';
 import './App.css';
 
@@ -41,7 +42,7 @@ class App extends Component {
 	render() {
 		const { monsters, searchField } = this.state;
 		const { onSearchChange } = this;
-		console.log('render');
+
 		const filteredMonsters = monsters.filter((monster) => {
 			return monster.name.toLowerCase().includes(searchField);
 		});
@@ -53,7 +54,9 @@ class App extends Component {
 					placeholder="search monsters"
 					className="monsters-search-box"
 				/>
-				<CardList monsters={filteredMonsters} />
+				<Scroll>
+					<CardList monsters={filteredMonsters} />
+				</Scroll>
 			</div>
 		);
 	}

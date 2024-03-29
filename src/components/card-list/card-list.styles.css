@@ -1,24 +1,12 @@
 .card-list {
 	width: 85vw;
+	border: red 2px solid;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(200px, 1fr)
+	); /* Adjust column size based on available space */
 	grid-gap: 20px;
-}
-.card-container {
-	display: flex;
-	flex-direction: column;
-	background-color: #95dada;
-	border: 1px solid grey;
-	border-radius: 5px;
-	padding: 25px;
-	cursor: pointer;
-	-moz-osx-font-smoothing: grayscale;
-	backface-visibility: hidden;
-	transform: translateZ(0);
-	transition: transform 0.25s ease-out;
-}
-
-.card-container:hover {
-	transform: scale(1.05);
+	padding: 10px;
 }
