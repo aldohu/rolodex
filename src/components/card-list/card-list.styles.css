@@ -1,6 +1,6 @@
 .card-list {
 	width: 85vw;
-	border: red 2px solid;
+	border: #fff 2px solid;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(

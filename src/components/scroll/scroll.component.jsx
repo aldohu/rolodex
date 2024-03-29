@@ -8,6 +8,7 @@ class Scroll extends Component {
 					overflowY: 'scroll',
 					border: '1px solid black',
 					height: '500px',
+					scrollbarWidth: 'none',
 				}}
 			>
 				{this.props.children}
